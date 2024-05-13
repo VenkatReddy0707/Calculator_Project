@@ -1,0 +1,126 @@
+/* Global reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+/* Container for the calculator app */
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Calculator container */
+.calculator {
+	background-color: #22252D;
+	width: 100%;
+	max-width: 375px;
+	min-height: 640px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1.5rem;
+	overflow: hidden;
+}
+
+/* Display area for input and output */
+.display {
+	min-height: 200px;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	color: white;
+	text-align: right;
+	flex: 1 1 0%;
+}
+
+/* Content within the display area */
+.display .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	max-width: 100%;
+	overflow: auto;
+}
+
+/* Input display style */
+.display .input {
+	width: 100%;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Output display style */
+.display .output {
+	font-size: 3rem;
+	font-weight: 700;
+	width: 100%;
+	white-space: nowrap;
+}
+
+/* Styling for operators in the display */
+.display .operator {
+	color: #EB6666;
+}
+
+/* Styling for brackets and percentage in the display */
+.display .brackets,
+.display .percent {
+	color: #26FED7;
+}
+
+/* Styling for the keys section */
+.keys {
+	background-color: #292D36;
+	padding: 1.5rem;
+	border-radius: 1.5rem 1.5rem 0 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 1rem;
+	box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for each key */
+.keys .key {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	height: 0;
+	padding-top: 100%;
+	background-color: #262933;
+	border-radius: 1rem;
+	transition: 0.2s;
+	user-select: none;
+}
+
+/* Styling for the text within each key */
+.keys .key span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2rem;
+	font-weight: 700;
+	color: #FFF;
+}
+
+/* Hover effect for keys */
+.keys .key:hover {
+	box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for operator keys */
+.keys .key.operator span {
+	color: #1419ab;
+}
+
+/* Styling for action keys */
+.keys .key.action span {
+	color: #ee46ee;
+}
